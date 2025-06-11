@@ -6,7 +6,16 @@
     <title>Cronômetro</title>
     <style>
         body {
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 15px;
         }
     </style>
 </head>
@@ -14,9 +23,11 @@
     <h1>Cronômetro Digital</h1>
     <p id="tempo">00:00</p>
     <div class="buttons">
-        <button class="start">Start</button>
-        <button class="stop">Stop</button>
-        <button class="reset">Reset</button>
+        <button class="start" onclick="start()">Start</button>
+        <button class="stop" onclick="stop()">Stop</button>
+        <button class="reset" onclick="reset()">Reset</button>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
