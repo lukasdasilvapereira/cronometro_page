@@ -18,13 +18,21 @@ function iniciarCronometro() {
 function atualizarTempo() {
     segundos++;
     iniciarCronometro();
-    tempo.innerHTML = `${segundos}${ minutos }${ horas }`
+    tempo.innerHTML = `${horas}:${minutos}:${segundos}`
 
 }
 
-
-
-
 function start() {
     intervalo = setInterval(atualizarTempo, 1000);
+}
+
+function stop() {
+    clearInterval(intervalo);
+}
+
+function reset() {
+    tempo.textContent = "0:0:0";
+    segundos = 0;
+    minutos = 0;    
+    horas = 0;
 }
